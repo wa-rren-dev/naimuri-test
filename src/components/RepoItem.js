@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 export function RepoItem({ repo }) {
-  const { name, description, html_url } = repo;
+  const { name, description } = repo;
   return (
     <li>
       <h2>

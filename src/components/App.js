@@ -1,5 +1,3 @@
-import { Fragment } from "react";
-
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import { RepoView } from "./RepoView";
