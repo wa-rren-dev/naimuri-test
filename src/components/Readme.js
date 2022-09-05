@@ -18,7 +18,7 @@ export function Readme() {
         <p>
           The readme from this repo isn't named "README.MD". You can try{" "}
           <a
-            href="#"
+            href={`https://github.com/${organisation}/${repo}/tree/master`}
             aria-label={`Open this repo on Github in a new tab (${repo})`}
           >
             visiting the repo directly

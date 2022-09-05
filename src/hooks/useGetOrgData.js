@@ -1,6 +1,7 @@
 import useSWR from "swr";
 import { API_BASE } from "../constants";
 
+// noinspection JSCheckFunctionSignatures
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export function useGetOrgData(orgName) {
