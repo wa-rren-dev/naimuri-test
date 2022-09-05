@@ -1,8 +1,8 @@
-export function RepoOverview({ orgName, avatar_url, url }) {
+export function OrgOverview({ orgName, avatar_url, html_url }) {
   return (
     <>
       <h1>
-        List of <a href={url}>{orgName}</a> repositories
+        List of <a href={html_url}>{orgName}</a> repositories
       </h1>
       {avatar_url && (
         <img

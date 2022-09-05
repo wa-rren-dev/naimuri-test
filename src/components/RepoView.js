@@ -1,30 +1,28 @@
 import { useParams } from "react-router-dom";
-import { useGetReposForOrg } from "../hooks/useGetReposForOrg";
-import { RepoOverview } from "./RepoOverview";
-import { RepoList } from "./RepoList";
+import { useGetRepoData } from "../hooks/useGetRepoData";
+import { Readme } from "./Readme";
 
-export function RepoView({ organisation }) {
+export function RepoView() {
   const urlParams = useParams();
-  const { repos, isLoading, isError, fail, failMessage } = useGetReposForOrg(
-    urlParams.organisation
-  );
+  const { organisation, repo } = urlParams;
+  const { data, isLoading, isError } = useGetRepoData(organisation, repo);
 
-  if (isError) return <h1>Error with the request</h1>;
   if (isLoading) return <h1>loading...</h1>;
-  if (fail) return <h1>{failMessage}</h1>;
+  if (isError) return <h1>Error with the request</h1>;
 
-  // Get the details of this org from the first repo
-  // Should prob do this from another endpoint!
-  const {
-    owner: { login: orgName, avatar_url, url },
-  } = repos[0];
+  const { name, html_url, owner } = data;
+
+  const { login } = owner;
 
   return (
-    <main>
-      {orgName && (
-        <RepoOverview orgName={orgName} avatar_url={avatar_url} url={url} />
-      )}
-      <RepoList repos={repos} />
-    </main>
+    <>
+      <h1>
+        Readme for{" "}
+        <a href={html_url}>
+          {login}/{name}
+        </a>
+      </h1>
+      <Readme />
+    </>
   );
 }

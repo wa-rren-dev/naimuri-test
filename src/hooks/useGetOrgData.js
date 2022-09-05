@@ -1,15 +1,13 @@
 import useSWR from "swr";
+import { API_BASE } from "../constants";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-export function useGetReposForOrg(orgName) {
-  const { data, error } = useSWR(
-    `https://api.github.com/orgs/${orgName}/repos`,
-    fetcher
-  );
+export function useGetOrgData(orgName) {
+  const { data, error } = useSWR(`${API_BASE}/orgs/${orgName}/repos`, fetcher);
 
   return {
-    repos: data,
+    data,
     isLoading: !error && !data,
     isError: error,
     // 'Fail' can occur if the organisation name doesn't exist or if the organisation has no public repos
