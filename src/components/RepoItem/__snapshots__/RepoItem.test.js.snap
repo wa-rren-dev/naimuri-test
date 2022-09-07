@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RepoItem should match the snapshot 1`] = `
+<DocumentFragment>
+  <li
+    aria-label="test-repo"
+    class="RepoItem"
+  >
+    <div>
+      <h2>
+        <a
+          aria-label="View readme for test-repo"
+          href="/test-repo"
+        >
+          test-repo
+        </a>
+      </h2>
+      <p
+        class="RepoItem__description"
+      >
+        A test repo
+      </p>
+      <dl
+        class="RepoItem__meta"
+      >
+        <div
+          class="RepoItem__metaItem"
+        >
+          <dt>
+            <span
+              aria-hidden="true"
+              class="RepoItem__metaIcon"
+              title="Stars"
+            >
+              ⭐
+            </span>
+            ️ 
+            <span
+              class="RepoItem__metaLabel"
+            >
+              Stars
+            </span>
+          </dt>
+          <dd>
+            0
+          </dd>
+        </div>
+        <div
+          class="RepoItem__metaItem"
+        >
+          <dt>
+            <span
+              aria-hidden="true"
+              class="RepoItem__metaIcon"
+              title="Forks"
+            >
+              🍴
+            </span>
+             
+            <span
+              class="RepoItem__metaLabel"
+            >
+              Forks
+            </span>
+          </dt>
+          <dd>
+            0
+          </dd>
+        </div>
+        <div
+          class="RepoItem__metaItem"
+        >
+          <dt>
+            <span
+              aria-hidden="true"
+              class="RepoItem__metaIcon"
+              title="Link to repository"
+            >
+              🔗
+            </span>
+             
+            <span
+              class="RepoItem__metaLabel"
+            >
+              Link
+            </span>
+          </dt>
+          <dd>
+            <a
+              aria-label="View test-repo repo on Github"
+              href="http://example.com"
+            >
+              View on Github
+            </a>
+          </dd>
+        </div>
+        <div
+          class="RepoItem__metaItem"
+        >
+          <dt>
+            <span
+              aria-hidden="true"
+              class="RepoItem__metaIcon"
+              title="Open issues"
+            >
+              🧐
+            </span>
+             
+            <span
+              class="RepoItem__metaLabel"
+            >
+              Open Issues
+            </span>
+          </dt>
+          <dd />
+        </div>
+        <div
+          class="RepoItem__metaItem"
+        >
+          <dt>
+            <span
+              aria-hidden="true"
+              class="RepoItem__metaIcon"
+              title="Repo created"
+            >
+              🐣
+            </span>
+             
+            <span
+              class="RepoItem__metaLabel"
+            >
+              Created
+            </span>
+          </dt>
+          <dd />
+        </div>
+      </dl>
+    </div>
+  </li>
+</DocumentFragment>
+`;

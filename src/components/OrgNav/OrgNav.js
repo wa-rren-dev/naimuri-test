@@ -34,7 +34,11 @@ export function OrgNav() {
       <p>
         For example <em>facebook</em> or <em>twitter</em>.
       </p>
-      <form onSubmit={handleFormSubmit} className={s.OrgNav__customForm}>
+      <form
+        aria-label="Enter organisation name"
+        onSubmit={handleFormSubmit}
+        className={s.OrgNav__customForm}
+      >
         <label htmlFor="org-name" className={s.OrgNav__label}>
           Enter organisation name
         </label>
