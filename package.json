@@ -49,5 +49,10 @@
   },
   "volta": {
     "node": "16.17.0"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!@ngrx|(?!deck.gl)|ng-dynamic)"
+    ]
   }
 }
