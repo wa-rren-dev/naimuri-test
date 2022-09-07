@@ -18,3 +18,5 @@ locally at port `3000`. CRA can take a moment to get going.
 
 ## Testing
 
+- `npm test` will run some basic tests on the client
+
