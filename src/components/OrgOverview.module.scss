@@ -1,0 +1,13 @@
+.OrgOverview {
+  display: flex;
+  justify-content: space-between;
+  &__heading {
+    margin-bottom: 0;
+  }
+  &__avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+  }
+}

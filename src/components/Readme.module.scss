@@ -1,6 +1,34 @@
 .container {
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f9f9f9;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+
+  p, h1, h2, h3, h4, h5, h6, pre, code, ul, ol {
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  ul, ol {
+    list-style-position: inside;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
 }

@@ -14,7 +14,7 @@ export function Readme() {
   if (markdown === false)
     return (
       <div>
-        <h1>Sorry!</h1>
+        <h2>Sorry!</h2>
         <p>
           The readme from this repo isn't named "README.MD". You can try{" "}
           <a

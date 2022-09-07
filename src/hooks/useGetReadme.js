@@ -1,5 +1,6 @@
 import useSWR from "swr";
 
+// noinspection JSCheckFunctionSignatures
 const fetcher = (...args) => fetch(...args).then((res) => res.text());
 
 export function useGetReadme(orgName, repoName) {

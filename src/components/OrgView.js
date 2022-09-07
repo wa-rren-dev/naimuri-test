@@ -28,7 +28,7 @@ export function OrgView() {
           html_url={html_url}
         />
       )}
-      <RepoList repos={data} />
+      <RepoList repos={data} orgName={orgName} />
     </main>
   );
 }

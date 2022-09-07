@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import { OrgView } from "./OrgView";
 import { RepoView } from "./RepoView";
 import { OrgNav } from "./OrgNav";
 import { ErrorBoundary } from "./ErrorBoundary";
+import "./App.scss";
 
 function App() {
   return (

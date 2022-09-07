@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useGetRepoData } from "../hooks/useGetRepoData";
 import { Readme } from "./Readme";
+import { Helmet } from "react-helmet";
 
 export function RepoView() {
   const urlParams = useParams();
@@ -16,6 +17,11 @@ export function RepoView() {
 
   return (
     <>
+      <Helmet>
+        <title>
+          Readme for {login}/{name}
+        </title>
+      </Helmet>
       <h1>
         Readme for{" "}
         <a href={html_url}>

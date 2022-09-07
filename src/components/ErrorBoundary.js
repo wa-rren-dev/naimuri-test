@@ -10,7 +10,7 @@ export class ErrorBoundary extends Component {
     return { hasError: true };
   }
 
-  componentDidCatch(error, errorDetails) {
+  componentDidCatch(error, _errorInfo) {
     console.log("caught error", error);
     this.setState({ errorDetails: error.message });
   }
@@ -20,10 +20,6 @@ export class ErrorBoundary extends Component {
       return (
         <>
           <h1>Error boundary!</h1>
-          <p>
-            It's likely the Github API is rejecting queries based on the
-            anonymous request rate limit.
-          </p>
           <pre>{this.state.errorDetails}</pre>
         </>
       );
