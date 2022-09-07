@@ -8,7 +8,9 @@ export function RepoItem({ repo }) {
     <li className={s.RepoItem} aria-label={name}>
       <div>
         <h2>
-          <Link to={name}>{name}</Link>
+          <Link to={name} aria-label={`View readme for ${name}`}>
+            {name}
+          </Link>
         </h2>
         {description && (
           <p className={s.RepoItem__description}>{description}</p>

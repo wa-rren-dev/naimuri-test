@@ -1,14 +1,16 @@
 # Naimuri Github API task
 
-Thank you for the opportunity to complete this task. I really enjoyed working on it and look foward to discussing!
-
-## About
-
+Thank you for the opportunity to complete this task. I enjoyed working on it and look foward to discussing what's here.
 
 ## To run locally
+
+For expediency, I haven't prepared a 'build' process so please run the solution in dev mode via the following steps:
+
 - `npm i`
 - `npm start`
-- Should open in browser at `localhost:3000`
+
+`postinstall` should install the dependencies in `/server`. App should open in browser 
+locally at port `3000`.
 
 ## Structure
 

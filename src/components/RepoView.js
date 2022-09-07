@@ -16,7 +16,7 @@ export function RepoView() {
   const { login } = owner;
 
   return (
-    <>
+    <main>
       <Helmet>
         <title>
           Readme for {login}/{name}
@@ -29,6 +29,6 @@ export function RepoView() {
         </a>
       </h1>
       <Readme />
-    </>
+    </main>
   );
 }
