@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
-import { useGetOrgData } from "../hooks/useGetOrgData";
-import { OrgOverview } from "./OrgOverview";
-import { RepoList } from "./RepoList";
+import { useGetOrgData } from "../../hooks/useGetOrgData";
+import { OrgOverview } from "../OrgOverview/OrgOverview";
+import { RepoList } from "../RepoList/RepoList";
 
 export function OrgView() {
   const urlParams = useParams();

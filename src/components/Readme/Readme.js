@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useGetReadme } from "../hooks/useGetReadme";
+import { useGetReadme } from "../../hooks/useGetReadme";
 import ReactMarkdown from "react-markdown";
 import s from "./Readme.module.scss";
 

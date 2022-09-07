@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
-import { useGetRepoData } from "../hooks/useGetRepoData";
-import { Readme } from "./Readme";
+import { useGetRepoData } from "../../hooks/useGetRepoData";
+import { Readme } from "../Readme/Readme";
 import { Helmet } from "react-helmet";
 
 export function RepoView() {

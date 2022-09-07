@@ -1,4 +1,4 @@
-import { RepoItem } from "./RepoItem";
+import { RepoItem } from "../RepoItem/RepoItem";
 import s from "./RepoList.module.scss";
 import { useEffect, useState } from "react";
 

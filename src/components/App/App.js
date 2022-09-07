@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { OrgView } from "./OrgView";
-import { RepoView } from "./RepoView";
-import { OrgNav } from "./OrgNav";
-import { ErrorBoundary } from "./ErrorBoundary";
+import { OrgView } from "../OrgView/OrgView";
+import { RepoView } from "../RepoView/RepoView";
+import { OrgNav } from "../OrgNav/OrgNav";
+import { ErrorBoundary } from "../ErrorBoundary/ErrorBoundary";
 import "./App.scss";
 
 function App() {
