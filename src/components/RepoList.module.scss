@@ -1,9 +1,16 @@
+@use "./App.scss" as App;
+
 .RepoList {
   padding: 0;
   margin: 0;
   list-style: none;
+
   &__listSummary {
     margin-bottom: 1rem;
+  }
+
+  &__ariaLive {
+    @extend .visually-hidden;
   }
 }
 

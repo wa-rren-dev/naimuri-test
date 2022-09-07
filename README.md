@@ -10,7 +10,7 @@ For expediency, I haven't prepared a 'build' process so please run the solution 
 - `npm start`
 
 `postinstall` should install the dependencies in `/server`. App should open in browser 
-locally at port `3000`.
+locally at port `3000`. CRA can take a moment to get going.
 
 ## Structure
 

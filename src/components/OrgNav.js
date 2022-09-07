@@ -20,13 +20,13 @@ export function OrgNav() {
       </Helmet>
       <h1>Choose an organisation</h1>
       <ul className={s.OrgNav} aria-label="List of organisations">
-        <li>
+        <li className={s.OrgNav__item}>
           <Link to="/nhsuk">NHS Digital</Link>
         </li>
-        <li>
+        <li className={s.OrgNav__item}>
           <Link to="/nice-digital">NICE Digital</Link>
         </li>
-        <li>
+        <li className={s.OrgNav__item}>
           <Link to="/naimuri">Naimuri</Link>
         </li>
       </ul>

@@ -1,21 +1,24 @@
 import { RepoItem } from "./RepoItem";
 import s from "./RepoList.module.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function RepoList({ repos, orgName }) {
   const [sortedBy, setSortedBy] = useState("name");
-
+  const [liveRegionMessage, setLiveRegionMessage] = useState("");
   const sortedRepos = sortRepos(repos, sortedBy);
+
+  useEffect(() => {
+    setLiveRegionMessage(
+      `Showing ${repos.length} repositories, sorted by ${sortedBy}.`
+    );
+  }, [sortedBy, repos.length]);
 
   return (
     <>
-      <p
-        id="list-summary"
-        className={s.RepoList__listSummary}
-        aria-live="assertive"
-      >
-        Showing {repos.length} respositories, sorted by {sortedBy}.
+      <p id="list-summary" className={s.RepoList__listSummary}>
+        {liveRegionMessage}
       </p>
+      {/* I know the below isn't the most elegant thing in the world but I have to draw a line somwehere! */}
       <p>
         You can also{" "}
         {sortedBy === "name" && (

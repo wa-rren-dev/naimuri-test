@@ -1,16 +1,22 @@
 .OrgNav {
-  list-style-position: inside;
+  list-style-type: none;
   margin-bottom: 2rem;
+
+  &__item {
+    margin-bottom: 0.5rem;
+  }
 
   &__customForm {
     background: #eee;
     padding: 1rem;
   }
+
   &__label {
     font-weight: bold;
     display: block;
     margin-bottom: 0.5rem;
   }
+
   &__input {
     margin-right: 1rem;
   }

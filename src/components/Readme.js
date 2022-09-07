@@ -8,7 +8,7 @@ export function Readme() {
   const { organisation, repo } = urlParams;
   const { markdown, isLoading, isError } = useGetReadme(organisation, repo);
 
-  if (isLoading) return <h1>loading...</h1>;
+  if (isLoading) return <h1 aria-live="assertive">Loading readme</h1>;
   if (isError) return <h1>Error with the request</h1>;
 
   if (markdown === false)

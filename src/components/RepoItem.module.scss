@@ -1,25 +1,33 @@
+@use "./App.scss" as App;
+
 .RepoItem {
   background: white;
   border-top: 2px solid #ccc;
   padding-top: 2rem;
   margin-top: 2rem;
+
   &:first-of-type {
     margin-bottom: 0;
   }
+
   &__description {
     margin-bottom: 1rem;
+
     &:before {
       content: '\00201C';
     }
+
     &:after {
       content: '\00201D';
     }
   }
+
   &__meta {
     display: flex;
     align-items: center;
     justify-content: flex-start;
   }
+
   &__metaItem {
     display: flex;
     align-items: baseline;
@@ -28,24 +36,20 @@
     padding: 0.2rem 0.5rem;
     border-radius: 3px;
     margin-right: 1rem;
+
     &:last-of-type {
       margin-right: 0;
     }
   }
+
   &__metaIcon {
     margin-right: 0.5rem;
     transform: scale(2.25);
     display: inline-block;
-    text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
   }
+
   &__metaLabel {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+    @extend .visually-hidden;
   }
 }

@@ -8,7 +8,7 @@ export function RepoView() {
   const { organisation, repo } = urlParams;
   const { data, isLoading, isError } = useGetRepoData(organisation, repo);
 
-  if (isLoading) return <h1>loading...</h1>;
+  if (isLoading) return <h1 aria-live="assertive">Loading repository</h1>;
   if (isError) return <h1>Error with the request</h1>;
 
   const { name, html_url, owner } = data;

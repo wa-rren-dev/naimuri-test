@@ -10,7 +10,8 @@ export function OrgView() {
   );
 
   if (isError) return <h1>Error with the request</h1>;
-  if (isLoading) return <h1>loading...</h1>;
+  if (isLoading)
+    return <h1 aria-live="assertive">Loading organisation details</h1>;
   if (fail) return <h1>{failMessage}</h1>;
 
   // Get the details of this org from the first repo
