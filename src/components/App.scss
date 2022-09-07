@@ -40,3 +40,8 @@ h3 {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+a:focus, button:focus, input:focus  {
+  outline: 6px solid black;
+  outline-offset: 3px;
+}

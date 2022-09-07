@@ -2,6 +2,13 @@ import { RepoItem } from "./RepoItem";
 import s from "./RepoList.module.scss";
 import { useEffect, useState } from "react";
 
+function setFocus(selector) {
+  //  pull focus to top of page (like a refresh) in a cheap and nasty non-react way - should pass a ref down from the parent component
+  const el = document.querySelector(selector);
+  el.setAttribute("tabindex", "-1");
+  el.focus();
+}
+
 export function RepoList({ repos, orgName }) {
   const [sortedBy, setSortedBy] = useState("name");
   const [liveRegionMessage, setLiveRegionMessage] = useState("");
@@ -11,6 +18,7 @@ export function RepoList({ repos, orgName }) {
     setLiveRegionMessage(
       `Showing ${repos.length} repositories, sorted by ${sortedBy}.`
     );
+    setFocus("main");
   }, [sortedBy, repos.length]);
 
   return (
@@ -19,6 +27,7 @@ export function RepoList({ repos, orgName }) {
         {liveRegionMessage}
       </p>
       {/* I know the below isn't the most elegant thing in the world but I have to draw a line somwehere! */}
+      {/* Would prob refactor these to work on query parameters rather than state */}
       <p>
         You can also{" "}
         {sortedBy === "name" && (
